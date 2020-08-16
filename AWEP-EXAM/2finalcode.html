@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function readusername()
+{
+
+let userinput1=document.querySelector("#id1").value;
+const newEle=document.querySelector("#id4").value;
+newEle.children[0].innerHTML=userinput1;
+newEle.removeattribute("id");
+
+const commentbox = document.querySelector("#id4");
+commentbox.insertBefore[newEle,commentbox.firstChild];
+}
+
+document.querySelector("#id1").value="";
+}
+
+
+function readpassword()
+{
+let b=document.querySelector("#id2").value;
+console.log(b);
+document.querySelector("#id2").value="";
+}
+
+
+ function reademailid()
+ {
+    let c=document.querySelector("#id3").value;
+    console.log(c);
+    document.querySelector("#id3").value="";
+}
+</script>
+</head>
+<body>
+   
+    <div>
+        <div onclick="readusername()">Username:</div>  
+        <input id="id1"type="text" placeholder="Enter Username" pattern="(?=.*[a-zA-z])">
+    </div>
+
+    <div>
+        <div onclick="readpassword()">Password:</div> 
+        <input id="id2"type="text" placeholder="Enter Password" pattern="(?=.*[a-zA-z])">
+    </div>
+
+    <div>
+        <div onclick="reademailid()">Emailid:</div> 
+        <input  id="id3"type="text" placeholder="Enter Emailid" pattern="(?=.*[a-zA-z]),/d*(0-9)">
+    </div>
+
+    <div id="id4">
+    ref
+    </div>
+
+</body>
+</html>
